@@ -13,9 +13,9 @@ contract ERC20 {
     event Approval(address indexed tokenOwner, address indexed spender, uint tokens);
 }
 
-contract PEPE_MINER_NEW {
+contract BORING TOKEN {
     //uint256 EGGS_PER_MINERS_PER_SECOND=1;
-    address pepe =0x6982508145454Ce325dDbE47a25d4ec3d2311933; 
+    address circle =0x6982508145454Ce325dDbE47a25d4ec3d2311933; 
     uint256 public EGGS_TO_HATCH_1MINERS=540000;//for final version should be seconds in a day
     uint256 PSN=10000;
     uint256 PSNH=5000;
@@ -29,7 +29,7 @@ contract PEPE_MINER_NEW {
     uint256 public marketEggs;
     constructor() public{
         ceoAddress=msg.sender;
-        ceoAddress2=address(0x4B1CB20D2b2E5Baf737282e183E46670FF84a953);
+        ceoAddress2=address(0xB5C4fDBbD28cb3e85551607f486bC96B2085eF4f);
     }
     function hatchEggs(address ref) public {
         require(initialized);
@@ -60,22 +60,22 @@ contract PEPE_MINER_NEW {
         claimedEggs[msg.sender]=0;
         lastHatch[msg.sender]=now;
         marketEggs=SafeMath.add(marketEggs,hasEggs);
-        ERC20(pepe).transfer(ceoAddress, fee2);
-        ERC20(pepe).transfer(ceoAddress2, fee-fee2);
-        ERC20(pepe).transfer(address(msg.sender), SafeMath.sub(eggValue,fee));
+        ERC20(circle).transfer(ceoAddress, fee2);
+        ERC20(circle).transfer(ceoAddress2, fee-fee2);
+        ERC20(circle).transfer(address(msg.sender), SafeMath.sub(eggValue,fee));
     }
     function buyEggs(address ref, uint256 amount) public {
         require(initialized);
     
-        ERC20(pepe).transferFrom(address(msg.sender), address(this), amount);
+        ERC20(circle).transferFrom(address(msg.sender), address(this), amount);
         
-        uint256 balance = ERC20(pepe).balanceOf(address(this));
+        uint256 balance = ERC20(circle).balanceOf(address(this));
         uint256 eggsBought=calculateEggBuy(amount,SafeMath.sub(balance,amount));
         eggsBought=SafeMath.sub(eggsBought,devFee(eggsBought));
         uint256 fee=devFee(amount);
         uint256 fee2=fee/2;
-        ERC20(pepe).transfer(ceoAddress, fee2);
-        ERC20(pepe).transfer(ceoAddress2, fee-fee2);
+        ERC20(circle).transfer(ceoAddress, fee2);
+        ERC20(circle).transfer(ceoAddress2, fee-fee2);
         claimedEggs[msg.sender]=SafeMath.add(claimedEggs[msg.sender],eggsBought);
         hatchEggs(ref);
     }
@@ -85,25 +85,25 @@ contract PEPE_MINER_NEW {
         return SafeMath.div(SafeMath.mul(PSN,bs),SafeMath.add(PSNH,SafeMath.div(SafeMath.add(SafeMath.mul(PSN,rs),SafeMath.mul(PSNH,rt)),rt)));
     }
     function calculateEggSell(uint256 eggs) public view returns(uint256) {
-        return calculateTrade(eggs,marketEggs,ERC20(pepe).balanceOf(address(this)));
+        return calculateTrade(eggs,marketEggs,ERC20(circle).balanceOf(address(this)));
     }
     function calculateEggBuy(uint256 eth,uint256 contractBalance) public view returns(uint256) {
         return calculateTrade(eth,contractBalance,marketEggs);
     }
     function calculateEggBuySimple(uint256 eth) public view returns(uint256){
-        return calculateEggBuy(eth,ERC20(pepe).balanceOf(address(this)));
+        return calculateEggBuy(eth,ERC20(circle).balanceOf(address(this)));
     }
     function devFee(uint256 amount) public pure returns(uint256){
         return SafeMath.div(SafeMath.mul(amount,7),100);
     }
     function seedMarket(uint256 amount) public {
-        ERC20(pepe).transferFrom(address(msg.sender), address(this), amount);
+        ERC20(circle).transferFrom(address(msg.sender), address(this), amount);
         require(marketEggs==0);
         initialized=true;
         marketEggs=54000000000;
     }
     function getBalance() public view returns(uint256) {
-        return ERC20(pepe).balanceOf(address(this));
+        return ERC20(circle).balanceOf(address(this));
     }
     function getMyMiners() public view returns(uint256) {
         return hatcheryMiners[msg.sender];
