@@ -246,7 +246,7 @@ nav {
 .numseeders {
     text-decoration: underline;
     /* text-decoration-color: #354D5F; */
-    text-decoration-color: #b74ebbb7;
+    text-decoration-color: #100c11b7;
 }
 .tally-text{
   font-size: 3rem !important;
@@ -342,7 +342,7 @@ nav {
   margin: 0;
   font-weight: 600 !important;
   /* color: #354D5F !important; */
-  color: #b74ebbb7!important;
+  color: #fffffffb!important;
 }
 
 .matic-banner {
@@ -373,7 +373,7 @@ nav {
   padding-top: .5rem;
   font-weight: bold;
   /* color: #354D5F !important; */
-  color: #b74ebbb7!important;
+  color: #4e50bbb7!important;
 }
 
 .hold-contain-bottom {
