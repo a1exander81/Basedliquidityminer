@@ -33,7 +33,7 @@ a:hover{
   max-width: 600px;
   margin: auto;
   padding: 0 20px;
-  background-color: rgb(29, 28, 28);
+  background-color: rgba(250, 251, 253, 0.123);
   color: white;
 }
 
