@@ -451,14 +451,14 @@ nav {
 h1 {
     font-size: 3.5rem;
     /* color: #354D5F; */
-    color: #b74ebbb7;
+    color: #f8f8f8b7
     font-weight: bolder;
     margin-bottom: 15px
 }
 
 p {
     /* color: #354D5F !important; */
-    color: #b74ebbb7!important;
+    color: #0cff83!important;
 }
 
 h4 {
@@ -571,7 +571,7 @@ h4 {
 
 .btn-buy {
     color: rgb(2, 2, 2);
-    background-color: #b74ebbb7; /* rgba(242, 169, 0, 0.5); */
+    background-color: #20dbbab7;/* rgba(242, 169, 0, 0.5); */
     border-radius: 8px;
     /* border-color: #b74ebbb7; */ /* #354D5F; */
     font-weight: 600;
