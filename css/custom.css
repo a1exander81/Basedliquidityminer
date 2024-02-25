@@ -959,7 +959,7 @@ a:focus, a:hover {
 .modal-title {
   margin: 0;
   line-height: 1.42857143;
-  color: #b74ebbb7; /* #354D5F; */
+  color: #ffffffb7; /* #354D5F; */
 }
 
 tr {
@@ -967,8 +967,8 @@ tr {
 }
 
 .modal-content {
-  border: 1px solid #b74ebbb7; /* #354D5F; */
-  background-color: #ffffff;
+  border: 1px solid #0685fcb7; /* #354D5F; */
+  background-color: #181111c2;
 }
 .table>thead>tr>th {
   border-bottom: none;
@@ -976,6 +976,6 @@ tr {
 .close {
   font-weight: normal;
   line-height: 1;
-  color: #b74ebbb7; /* #354D5F; */
+  color: #060000b7; /* #354D5F; */
   opacity: .5;
 }
