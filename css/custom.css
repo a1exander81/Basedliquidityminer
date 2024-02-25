@@ -187,7 +187,7 @@ nav {
 
 .daily {
   /* background-color: grey; */
-  background-color: #b74ebbb7;
+  background-color: #4e5dbbf7;
   color: #fff !important;
   padding: 5px 10px;
   border-radius: 5px;
@@ -199,8 +199,8 @@ nav {
 
 .apr {
   /* background-color:rgba(242, 169, 0, 0.3); */
-  background-color:#aeaeaf;
-  color: rgb(12, 11, 11) !important;
+  background-color:#68aa94;
+  color: rgb(250, 248, 248) !important;
   padding: 5px 10px;
   border-radius: 5px;
   font-weight: 600;
