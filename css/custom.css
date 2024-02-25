@@ -458,7 +458,7 @@ h1 {
 
 p {
     /* color: #354D5F !important; */
-    color: #0cff83!important;
+    color: #ffffff!important;
 }
 
 h4 {
@@ -536,7 +536,7 @@ h4 {
 .btn-sell{
   background-color: #fff;
   /* color: #000; */
-  color: #b74ebbb7;
+  color: #18f3b7;
   border: 1px solid #000;
   border-radius: 8px;
   width: 50%;
@@ -615,7 +615,7 @@ h4 {
   font-weight: 600;
   color: #f6f2f6; /* #354D5F; */
   background-color: transparent;
-  border: 2px solid #b74ebbb7; /* #354D5F; */
+  border: 2px solid #20dbbab7; /* #354D5F; */
   border-radius: 8px;
 }
 
