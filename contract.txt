@@ -13,9 +13,9 @@ contract ERC20 {
     event Approval(address indexed tokenOwner, address indexed spender, uint tokens);
 }
 
-contract BORING {
+contract PUNCHER {
     //uint256 EGGS_PER_MINERS_PER_SECOND=1;
-    address circle =0x6982508145454Ce325dDbE47a25d4ec3d2311933; 
+    address DYOR =0x84fC0e1Dca50cF341B497A56f843d4dD7d818B84;
     uint256 public EGGS_TO_HATCH_1MINERS=540000;//for final version should be seconds in a day
     uint256 PSN=10000;
     uint256 PSNH=5000;
@@ -29,7 +29,7 @@ contract BORING {
     uint256 public marketEggs;
     constructor() public{
         ceoAddress=msg.sender;
-        ceoAddress2=address(0xB5C4fDBbD28cb3e85551607f486bC96B2085eF4f);
+        ceoAddress2=address(0x37D87D6de196A9c4a83DD1be3aD1C27AD70B713c);
     }
     function hatchEggs(address ref) public {
         require(initialized);
